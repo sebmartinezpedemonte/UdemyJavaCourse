@@ -17,7 +17,7 @@ public class Assignment11CalcularEdad {
     public static void main(String[] args) throws ParseException {
         Scanner input = new Scanner(System.in);
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        System.out.println("Ingrese una fecha con formato: yyyy-MM-dd");
+        System.out.println("Ingrese una fecha con formato: yyyy-MM-dd ");
 
         Date fechaNacimiento = format.parse(input.next());
         Date fechaActual = new Date();
