@@ -11,40 +11,35 @@ public class EjemploJavaUtilDateParse {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Scanner input = new Scanner(System.in);
 
-
-        System.out.println("Ingrese una fecha con formato: yyyy-MM-dd");
+        System.out.println("Enter a date with formato: yyyy-MM-dd");
         try {
-            Date fecha = format.parse(input.next());
-            System.out.println("fecha = " + fecha);
-            System.out.println("format = " + format.format(fecha));
+            Date date = format.parse(input.next());
+            System.out.println("date = " + date);
+            System.out.println("format = " + format.format(date));
 
-            Date fecha2 = new Date();
+            Date currentDate = new Date();
 
-            System.out.println("fecha2 = " + fecha2);
-            if(fecha.after(fecha2)){
-                System.out.println("Fecha del usuario es despues que fecha2");
-            }else if(fecha.before(fecha2)){
-                System.out.println("Fecha del usuario es anterior que fecha2");
-            }else if(fecha.equals(fecha2)){
-                System.out.println("fecha es igual a fecha2");
+            System.out.println("currentDate = " + currentDate);
+            if (date.after(currentDate)) {
+                System.out.println("date of the user is after currentDate  ");
+            } else if (date.before(currentDate)) {
+                System.out.println("date of the user is before currentDate");
+            } else if (date.equals(currentDate)) {
+                System.out.println("date of the user is equal to currentDate");
             }
+            //Another way to compare dates
+            if (date.compareTo((currentDate)) > 0) {
+                System.out.println("date of the user is after currentDate  ");
 
-            if(fecha.compareTo((fecha2)) > 0){
-                System.out.println("Fecha del usuario es despues que fecha2");
+            } else if (date.compareTo((currentDate)) < 0) {
+                System.out.println("date of the user is before currentDate");
 
-            }else if(fecha.compareTo((fecha2)) < 0){
-                System.out.println("Fecha del usuario es anterior que fecha2");
-
-            }else if(fecha.compareTo((fecha2)) == 0){
-                System.out.println("fecha es igual a fecha2");
-
+            } else if (date.compareTo((currentDate)) == 0) {
+                System.out.println("date of the user is equal to currentDate");
             }
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
-
-
         input.close();
     }
 }

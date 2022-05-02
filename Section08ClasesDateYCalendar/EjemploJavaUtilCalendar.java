@@ -6,10 +6,21 @@ import java.util.Date;
 
 public class EjemploJavaUtilCalendar {
     public static void main(String[] args) {
+        Calendar calendar = Calendar.getInstance();
+        Date date = calendar.getTime();
+        System.out.println("date = " + date);
+
+
+
+        Calendar calendar2 = Calendar.getInstance();
+        calendar2.set(2019, Calendar.JANUARY, 25, 18,20,10);
+        Date date2 = calendar2.getTime();
+        System.out.println("date2 = " + date2);
 
         Calendar calendario = Calendar.getInstance();
 
         //calendario.set(2019, Calendar.JANUARY, 25, 18,20,10);
+
         calendario.set(Calendar.YEAR, 2020);
         calendario.set(Calendar.MONTH, Calendar.JULY);
         calendario.set(Calendar.DAY_OF_MONTH, 25);
@@ -23,7 +34,7 @@ public class EjemploJavaUtilCalendar {
         Date fecha = calendario.getTime();
         System.out.println("fecha sin formato = " + fecha);
 
-        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS a");
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:SSS a");
         String fechaConFormato = formato.format(fecha);
         System.out.println("fechaConFormato = " + fechaConFormato);
 
