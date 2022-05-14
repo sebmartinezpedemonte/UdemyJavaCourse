@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class EjemploDateErrMain {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
+        /*
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
 
@@ -26,17 +26,17 @@ public class EjemploDateErrMain {
             main(args);
         }
         input.close();
-
+    */
 
         int n = 1;
         System.out.println("Ingrese un nro");
         int n2 = input.nextInt();
         try {
             System.out.println(n / n2);
-        } catch(Exception e){
-            System.out.println("Dividiste por cero");
-        main(args);
-    }
+        } catch (Exception e) {
+            System.err.println("Dividiste por cero");
+            main(args);
+        }
 
 
     }
