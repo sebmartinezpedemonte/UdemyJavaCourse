@@ -1,6 +1,6 @@
 package Section12Arrays;
 
-public class EjemploArreglosForOrdenamientoBurbuja {
+public class EjemploArreglosForOrdenamientoBurbujaSegundaForma {
     public static void arregloInverso(String[] arreglo) {
         int total = arreglo.length;
         int total2 = arreglo.length;
@@ -21,13 +21,12 @@ public class EjemploArreglosForOrdenamientoBurbuja {
 
         int total = productos.length;
 
-        for(int i = 0; i < total; i++){
-            for(int j = 0; j < total; j++){
-                if(productos[i].compareTo(productos[j])<0){
-                    //con el auxiliar podemos cambiar las posiciones
-                    String auxiliar = productos[i];
-                    productos[i] = productos[j];
-                    productos[j] = auxiliar;
+        for(int i = 0; i < total-1; i++){
+            for(int j = 0; j < total-1 -i; j++){
+                if(productos[j+1].compareTo(productos[j])<0){
+                    String auxiliar = productos[j];
+                    productos[j] = productos[j+1];
+                    productos[j+1] = auxiliar;
                 }
             }
         }

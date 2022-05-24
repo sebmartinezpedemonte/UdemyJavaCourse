@@ -1,8 +1,5 @@
 package Section12Arrays;
 
-import java.util.Arrays;
-import java.util.Collections;
-
 public class EjemploArreglosForInversoMutable {
     public static void arregloInverso(String[] arreglo) {
         int total = arreglo.length;
@@ -24,15 +21,17 @@ public class EjemploArreglosForInversoMutable {
 
         int total = productos.length;
 
-
-
-
-        //ordenar antes de iterar o mostrar
-        //Arrays.sort(productos); //lo ordena de la A la Z
-        //arregloInverso(productos);  //lo ordena de la forma inversa de la Z a la A
-
-        //otra forma es usando la Java Collections API
-        //Collections.reverse(Arrays.asList(productos));
+        for(int i = 0; i < total; i++){
+            for(int j = 0; j < total; j++){
+                if(productos[i].compareTo(productos[j])<0){
+                    //con el auxiliar podemos cambiar las posiciones
+                    String auxiliar = productos[i];
+                    productos[i] = productos[j];
+                    productos[j] = auxiliar;
+                }
+            }
+        }
+        
         System.out.println("=== usando for  ===");
         for (int i = 0; i < total; i++) {
             System.out.println("Para indice " + i + " : " + productos[i]);
