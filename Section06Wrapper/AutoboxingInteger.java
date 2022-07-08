@@ -28,6 +28,9 @@ public class AutoboxingInteger {
             }
         }
         System.out.println("suma = " + suma);
+        Integer pop = 3;
+        System.out.println(pop.getClass());
+
 
 
     }
