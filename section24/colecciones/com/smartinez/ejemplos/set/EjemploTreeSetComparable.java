@@ -61,7 +61,7 @@ public class EjemploTreeSetComparable {
         sa5.add(new Alumno("Jano", 7));
         sa5.add(new Alumno("Andres", 3));
         sa5.add(new Alumno("Zeus", 2));
-        sa5.add(new Alumno("Lucas", 2));
+        sa5.add(new Alumno("Luca", 2));
         System.out.println("Ordenando com Comparator con nota descedente");
         System.out.println(sa4);
     }
