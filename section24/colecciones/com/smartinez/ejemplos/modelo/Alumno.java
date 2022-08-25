@@ -73,7 +73,8 @@ public class Alumno implements Comparable<Alumno> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Alumno alumno = (Alumno) o;
-        return Objects.equals(nombre, alumno.nombre) && Objects.equals(nota, alumno.nota);
+        return Objects.equals(nombre, alumno.nombre) &&
+                Objects.equals(nota, alumno.nota);
     }
 
     @Override

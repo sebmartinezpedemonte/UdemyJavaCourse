@@ -8,7 +8,7 @@ public class EjemploAutomovilStatic {
         subaru.setEstanque(new Estanque());
         subaru.setColor(Color.BLANCO);
         subaru.setTipo(TipoAutomovil.HATCHBACK);
-        
+
         Automovil mazda = new Automovil("Mazda", "BT-50", Color.ROJO, new Motor(3.0, TipoMotor.DIESEL));
         mazda.setTipo(TipoAutomovil.PICKUP);
         //mazda.setEstanque(new Estanque());

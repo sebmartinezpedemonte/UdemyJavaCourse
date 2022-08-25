@@ -1,4 +1,4 @@
-package section24.colecciones.com.smartinez.ejemplos.set;
+package section24.colecciones.com.smartinez.ejemplos.list;
 
 import section24.colecciones.com.smartinez.ejemplos.modelo.Alumno;
 
