@@ -2,7 +2,7 @@ package section23.com.smartinez.pooexcepciones.ejemplo;
 
 import javax.swing.*;
 
-public class EjemploExcepciones {
+public class EjemploTryCatch {
     public static void main(String[] args) {
 
         Calculadora cal = new Calculadora();

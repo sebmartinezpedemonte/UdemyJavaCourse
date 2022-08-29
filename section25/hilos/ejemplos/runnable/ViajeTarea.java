@@ -1,7 +1,8 @@
 package section25.hilos.ejemplos.runnable;
 
 public class ViajeTarea implements Runnable{
-
+    //Implmentando Runnable es mas acoplable ya que
+    // al usar una interfaz puedo usar extends en esta clase
     private String nombre;
 
     public ViajeTarea(String nombre) {
