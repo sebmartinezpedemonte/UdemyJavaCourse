@@ -3,13 +3,24 @@ package section30.annotations.ejemplo.models;
 import section30.annotations.ejemplo.JsonAtributo;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class Producto {
-    @JsonAtributo(nombre = "descripcion")
+    //atributos que se van a exportar o a convertir en este Json les ponemos @JSonAtributo por encima
+    @JsonAtributo(capitalizar = true) //sino queda el nombre del atributo de la clase(en este caso nombre) nombre = "descripcion"
     private String nombre;
-    @JsonAtributo
+    @JsonAtributo (nombre = "costo")
     private Long precio;
     private LocalDate fecha;
+
+
+    private void init(){ //init de inicializar
+        this.nombre = Arrays.stream(nombre.split(" "))
+                .map(palabra -> palabra.substring(0, 1).toUpperCase()
+                        + palabra.substring(1).toLowerCase())
+                .collect(Collectors.joining(" "));
+    }
 
     public String getNombre() {
         return nombre;
